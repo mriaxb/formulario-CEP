@@ -14,14 +14,13 @@ cep.addEventListener("blur", (e) =>{
     let search = cep.value.replace("-", "")
     const cepValue = cep.value
     var validacep = /^[0-9]{8}$/;
-    addLoader()
+
     if(validacep.test(cepValue)){
         const options = {
             method: 'GET',
             mode: 'cors',
             cache: 'default'
         }
-        addLoader()
         fetch(`https://viacep.com.br/ws/${search}/json`, options)
         .then(response =>{response.json()
             .then(data => showData(data))
@@ -29,10 +28,11 @@ cep.addEventListener("blur", (e) =>{
             addLoader()
         })
         .catch(errorValidation(cep, 'CEP nao encontrado'))
+        apagaForm()
         
     }
     else{
-        apagaForm();
+        apagaForm()
         errorValidation(cep, 'CEP inválido')
     }
     
