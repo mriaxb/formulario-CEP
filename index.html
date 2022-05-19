@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Localização</h1>
+        </header>
+        <form id="form">
+            <div class="form-group">
+                <label for="cep" >Informe o CEP</label>
+                <input type="number" class="form-control" id="cep" maxlength="9">
+                <small>Msg d erro</small>
+            </div>
+            <div class="form-group">
+                <label for="rua">Rua</label>
+                <input type="text" class="form-control" id="logradouro">
+                <div class="loader" id="ruaLoad"></div>
+                <small>Msg d erro</small>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro">
+                <div class="loader" id="bairroLoad"></div>
+                <small>Msg d erro</small>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" class="form-control" id="localidade">
+                <div class="loader" id="cidadeLoad"></div>
+                <small>Msg d erro</small>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf">
+                <div class="loader" id="ufLoad"></div>
+                <small>Msg d erro</small>
+            </div>
+            <div class="form-group">
+                <label for="ibge">IBGE</label>
+                <input type="text" class="form-control" id="ibge">
+                <div class="loader" id="ibgeLoad"></div>
+                <small>Msg d erro</small>
+            </div>
+            <div class="form-group">
+                <label for="ddd">DDD</label>
+                <input type="text" class="form-control" id="ddd">
+                <div class="loader" id="dddLoad"></div>
+                <small>Msg d erro</small>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
